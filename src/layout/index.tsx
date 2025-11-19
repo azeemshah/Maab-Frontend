@@ -29,7 +29,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <Header onMenuToggle={toggleMobileSidebar} />
 
         {/* The main content area where your page components will render */}
-        <main className="flex-1 overflow-auto p-6">
+        <main className="flex-1 overflow-auto p-6 bg-[#dfdfdf42]">
           <div className="max-w-7xl mx-auto">
             {children} {/* Renders the content passed to the layout */}
           </div>

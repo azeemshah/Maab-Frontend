@@ -1,6 +1,7 @@
 export const langEn = {
   // General
   "gen.mainHeading": "Maab Portal",
+  "gen.systemAdministration": "System Administration",
   // Auth
   "auth.heading": "Login to access your dashboard",
   "auth.signingIn": "Signing In...",
@@ -71,7 +72,7 @@ export const langEn = {
   "users.createSupplier": "Create Supplier",
   "users.supplierinformation": "Supplier Information",
   "users.phone": "Phone Number",
-  "users.contact": "Contact Number",
+  "users.contactNumber": "Contact Number",
   "users.company": "Company Name",
   "users.address": "Address",
   "users.city": "City",
@@ -89,6 +90,8 @@ export const langEn = {
   "users.submit": "Submit",
   "users.addnewcustomer": "Add new Customer",
   "users.toggletoactivate": "Toggle to activate or deactivate this customer.",
+  "users.profileUpdated": "Profile updated successfully.",
+  "users.profileUpdateError": "An error occurred while updating the profile.",
 
   // Organizations
   "organizations.title": "Organization",

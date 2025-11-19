@@ -1,6 +1,7 @@
 export const langAr = {
   // General
   "gen.mainHeading": "بوابة معاب",
+  "gen.systemAdministration": "إدارة النظام",
   // Auth
   "auth.heading": "تسجيل الدخول للوصول إلى لوحة التحكم الخاصة بك",
   "auth.login": "تسجيل الدخول",
@@ -26,7 +27,7 @@ export const langAr = {
     "تمت إعادة تعيين كلمة المرور بنجاح. يمكنك الآن تسجيل الدخول باستخدام كلمة المرور الجديدة الخاصة بك.",
 
   // User Types
-  "userType.master_admin": "المدير الرئيسي",
+  "userType.admin": "المدير الرئيسي",
   "userType.organization_admin": "مدير المؤسسة",
   "userType.regular_user": "مستخدم عادي",
 
@@ -72,7 +73,7 @@ export const langAr = {
   "users.createSupplier": "إنشاء مورد",
   "users.supplierinformation": "معلومات المورد",
   "users.phone": "رقم الهاتف",
-  "users.contact": "رقم الاتصال",
+  "users.contactNumber": "رقم الاتصال",
   "users.company": "اسم الشركة",
   "users.address": "العنوان",
   "users.city": "المدينة",
@@ -90,6 +91,8 @@ export const langAr = {
   "users.submit": "إرسال",
   "users.addnewcustomer": "إضافة عميل جديد",
   "users.toggletoactivate": "بدّل لتشغيل أو إيقاف هذا العميل",
+  "users.profileUpdated": "تم تحديث الملف الشخصي بنجاح.",
+  "users.profileUpdateError": "حدث خطأ أثناء تحديث الملف الشخصي.",
 
   // Organizations
   "organizations.title": "إدارة المؤسسات",

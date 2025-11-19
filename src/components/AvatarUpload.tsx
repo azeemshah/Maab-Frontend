@@ -1,15 +1,18 @@
+import { error } from "console";
 import React, { useRef, useState } from "react";
 
 interface AvatarUploadProps {
   value?: File | null;
   onChange?: (file: File | null) => void;
   initialImage?: string; // for existing avatar URL (e.g., from DB)
+  error?: string[];
 }
 
 const AvatarUpload: React.FC<AvatarUploadProps> = ({
   value,
   onChange,
   initialImage,
+  error,
 }) => {
   const [preview, setPreview] = useState<string | null>(initialImage || null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -72,6 +75,13 @@ const AvatarUpload: React.FC<AvatarUploadProps> = ({
           onChange={handleFileChange}
         />
       </div>
+      {error && error.length > 0 && (
+        <div className="text-red-600 text-sm mt-1">
+          {error.map((errMsg, index) => (
+            <p key={index}>{errMsg}</p>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

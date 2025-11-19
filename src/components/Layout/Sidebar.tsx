@@ -53,7 +53,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               {t("gen.mainHeading")}
             </h1>
             <p className="text-sm text-muted-foreground mt-1">
-              {selectedOrganization?.name || "System Administration"}
+              {selectedOrganization?.name || t("gen.systemAdministration")}
             </p>
           </div>
           {isMobile && (

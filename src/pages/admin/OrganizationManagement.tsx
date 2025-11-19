@@ -1,23 +1,32 @@
-import React, { useState } from "react";
-import { UserType } from "@/contexts/AuthContext";
+import React, { useMemo } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import {
   Table,
   TableBody,
-  TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Plus, Search, Edit, Trash2 } from "lucide-react";
+import DataTable from "react-data-table-component";
+import { Plus, Search } from "lucide-react";
 import { MainLayout } from "@/layout";
 
 export const OrganizationManagement: React.FC = () => {
   const { t } = useLanguage();
+
+  const columns = useMemo(
+    () => [
+      {
+        name: t("users.firstName"),
+        selector: (row: any) => row.name,
+        sortable: true,
+      },
+    ],
+    []
+  );
 
   return (
     <MainLayout>
@@ -37,8 +46,7 @@ export const OrganizationManagement: React.FC = () => {
               {t("users.addUser")}
             </Button>
 
-            <Button
-              className="gap-2">
+            <Button className="gap-2">
               <Plus className="h-4 w-4" />
               {t("users.addSupplier") ?? "Add Supplier"}
             </Button>
@@ -50,15 +58,13 @@ export const OrganizationManagement: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input
-                  placeholder={t("common.search")}
-                  className="pl-10"
-                />
+                <Input placeholder={t("common.search")} className="pl-10" />
               </div>
               <div className="flex gap-2 flex-wrap"></div>
             </div>
           </CardHeader>
           <CardContent>
+            <DataTable columns={columns} data={[]} />
             <Table>
               <TableHeader>
                 <TableRow>
@@ -77,9 +83,7 @@ export const OrganizationManagement: React.FC = () => {
                   <TableHead>{t("users.actions")}</TableHead>
                 </TableRow>
               </TableHeader>
-              <TableBody>
-                
-              </TableBody>
+              <TableBody></TableBody>
             </Table>
 
             {[].length === 0 && (
